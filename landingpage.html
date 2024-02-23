@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-gFIkkTBJyOz4xUdNRI7AVPwq7GHbvn4JHZjxGwArP1imz0q7VUs8sohoiC6nvXr1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Bmt9okBIEvJtkjUe7F0UtxHP12yVVru8VxHzjB//94WJSsYjEmJg+DAXJArW1xJ5sev78mXUq27mrK4LxTQqzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="shortcut icon" type="x-icon" href="website icon.png">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.toggle {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+}
+.toggle::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+input[type="checkbox"]:checked + .toggle {
+  background-color: #333;
+}
+input[type="checkbox"]:checked + .toggle::before {
+  transform: translateX(30px);
+}
+</style>
+</head>
+<body>
+    <!-- Dark Mode Switch -->
+<div class="dark-mode-switch">
+    <input type="checkbox" id="darkModeSwitch">
+    <label for="darkModeSwitch" class="toggle"></label>
+</div>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Back to Top</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px; position: relative;" id="home">
+    <img class="w3-image" src="display.png" width="1600" height="800">
+  </header>
+
+  <script>
+    const darkModeSwitch = document.getElementById('darkModeSwitch');
+    darkModeSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+    </script>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- 1st Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="webdev.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">&lt;/&gt; Web Development</h1><br>
+        <p class="w3-large move-on-hover" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Navigate the digital landscape with expertise in <b>Web Development</b>, specializing in <b>Shopify</b> and <b>WordPress</b>. Elevate your online presence with tailored solutions that seamlessly blend creativity and functionality.</p>
+    </div>
+    <style>
+        .move-on-hover {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hover:hover {
+    transform: translateX(10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+</div>
+  <!-- 2nd Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"> <i class="fab fa-google marketing-suite-icon"></i> Google Full Marketing Suite</h1><br>
+        <p class="w3-large move-on-hovers" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Unleash your digital potential with the <b>Google Full Marketing Suite</b>. From powerful analytics to impactful advertising, it's your all-in-one solution for maximizing online success.</p>
+    </div>
+    <style>
+        .move-on-hovers {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hovers:hover {
+    transform: translateX(-10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="google.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+  <!-- 3rd Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="mudd.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fa fa-paint-brush"></i> Modern Unique Design Development</h1><br>
+        <p class="w3-large move-on-hover" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Elevate your projects with our expertise in <b>Modern Unique Design Development</b>. We bring a blend of creativity and innovation to ensure your endeavors stand out in today's dynamic landscape.</p>
+    </div>
+    <style>
+        .move-on-hover {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hover:hover {
+    transform: translateX(10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+</div>
+  <!-- 4th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-credit-card"></i> Payment Processing at Scale</h1><br>
+        <p class="w3-large move-on-hovers" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Effortlessly handle <b>Payment Processing at Scale</b> with our robust solutions. Streamline transactions and elevate your business efficiency, ensuring seamless financial operations.</p>
+    </div>
+    <style>
+        .move-on-hovers {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hovers:hover {
+    transform: translateX(-10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="payment.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+  <!-- 5th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="customersystems.mp4" type="video/mp4">
+        </video>
+    </div>
+    <style>
+        .move-on-hover {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hover:hover {
+    transform: translateX(10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-check-circle fa-sm"></i> Customer Post-Purchase Satisfaction Systems</h1><br>
+        <p class="w3-large move-on-hover" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Optimize <b>customer satisfaction post-purchase</b> with our tailored systems. Elevate the customer experience beyond the transaction, ensuring lasting satisfaction and loyalty.</p>
+    </div>
+</div>
+  <!-- 6th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-headset"></i> Customer Support (Email & Live Chat)</h1><br>
+        <p class="w3-large move-on-hovers" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Experience top-tier <b>Customer Support</b> with our <b>Email</b> and <b>Live Chat</b> services. We're dedicated to providing swift and effective assistance, ensuring a seamless and satisfying interaction for your customers.</p>
+    </div>
+    <style>
+        .move-on-hovers {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hovers:hover {
+    transform: translateX(-10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="customersupp.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+  <!-- 7th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <style>
+        .move-on-hover {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hover:hover {
+    transform: translateX(10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-video"></i> Video Production Agency for Mass Distribution</h1><br>
+        <p class="w3-large move-on-hover" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Power your brand with our <b>Video Production Agency</b>, specializing in content crafted for mass distribution. Elevate your reach and impact with compelling visuals tailored for widespread engagement.</p>
+    </div>
+</div>
+  <!-- 8th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-server"></i> Proxies, Virtual Machines, Horizontal Scaling</h1><br>
+        <p class="w3-large move-on-hovers" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Optimize performance with <b>Proxies</b>, <b>Virtual Machines</b>, and <b>Horizontal Scaling</b>. Harness the power of technology for seamless scalability and efficient operations.</p>
+    </div>
+    <style>
+        .move-on-hovers {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hovers:hover {
+    transform: translateX(-10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="proxy.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+  <!-- 9th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="extensive.mp4" type="video/mp4">
+        </video>
+    </div>
+    <style>
+        .move-on-hover {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hover:hover {
+    transform: translateX(10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-handshake"></i> Extensive Relationships with Suppliers</h1><br>
+        <p class="w3-large move-on-hover" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Forge success through our <b>Extensive Relationships with Suppliers</b>. Our robust connections ensure a seamless supply chain, fostering efficiency and reliability for your business needs.</p>
+    </div>
+</div>
+  <!-- 10th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-chart-line"></i> Advanced SEO & Daily Blogging</h1><br>
+        <p class="w3-large move-on-hovers" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Drive online visibility with our <b>Advanced SEO & Daily Blogging</b> services. Elevate your digital presence with strategic optimization and consistent, engaging content for sustained success.</p>
+    </div>
+    <style>
+        .move-on-hovers {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hovers:hover {
+    transform: translateX(-10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="SEO.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+  <!-- 11th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="businessop.mp4" type="video/mp4">
+        </video>
+    </div>
+    <style>
+        .move-on-hover {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hover:hover {
+    transform: translateX(10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-cogs"></i> Business Operations Automations</h1><br>
+        <p class="w3-large move-on-hover" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Optimize efficiency with our <b>Business Operations Automations</b>. Streamline processes, enhance productivity, and unlock the full potential of your business operations with cutting-edge automation solutions.</p>
+    </div>
+</div>
+  <!-- 12th Video -->
+  <div class="w3-row w3-padding-64">
+    <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><i class="fas fa-globe"></i> Web Hosting, Domains & Emails at Scale</h1><br>
+        <p class="w3-large move-on-hovers" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Unlock seamless online presence with our scalable solutions in <b>Web Hosting</b>, <b>Domains & Emails</b>. Experience reliability and efficiency tailored to your scale.</p>
+    </div>
+    <style>
+        .move-on-hovers {
+    transition: transform 0.3s ease; /* Apply transition effect */
+}
+
+.move-on-hovers:hover {
+    transform: translateX(-10px); /* Move the paragraph horizontally by 10 pixels */
+}
+    </style>
+    <div class="w3-col m6 w3-padding-large">
+        <video controls class="w3-round w3-image w3-opacity-min" width="600" height="750">
+            <source src="webhosting.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+</body>
+</html>
